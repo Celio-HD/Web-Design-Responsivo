@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+}
+
+/* CONTAINER GRID */
+
+.container{
+    display: grid;
+
+    grid-template-areas:
+        "header"
+        "home"
+        "sobre"
+        "servicos"
+        "depoimentos"
+        "contato";
+
+    grid-template-rows: auto auto auto auto auto auto;
+
+    min-height: 100vh;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* AREAS DO GRID */
+
+header{
+    grid-area: header;
+}
+
+#home{
+    grid-area: home;
+}
+
+#sobre{
+    grid-area: sobre;
+}
+
+#servicos{
+    grid-area: servicos;
+}
+
+#depoimentos{
+    grid-area: depoimentos;
+}
+
+#contato{
+    grid-area: contato;
+}
+
+/* ESPAÇAMENTO */
+
+section, header{
+    padding: 20px 0px;
+}
+
+/* LOGO */
+
+img{
+    max-height: 100px;
+}
+
+/* MENU */
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+li{
+    padding: 1rem;
+}
+
+a{
+    color: #c1c0ae;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #070705;
+}
+
+/* TITULOS */
+
+h2, h3{
+    color: #89a09a;
+    padding: 1%;
+}
+
+p{
+    margin: 1.1rem;
+}
+
+/* BOTAO */
+
+.botao{
+    background: #6366f1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* SERVIÇOS */
+
+#servicos{
+    text-align: center;
+}
+
+.cards-servicos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card{
+    background: #070705;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+/* DEPOIMENTOS */
+
+blockquote{
+    padding: 20px 0px;
+}
+
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards-servicos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        margin: 0 0 0 0;
+        max-width: 100vh;
+    }
+    img{
+        display: none;
+    }
+    .card{
+        max-width: 100%;
+    }
+
+}
