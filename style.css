@@ -6,56 +6,24 @@
 
 body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: #fff;
     background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
 }
-
-/* CONTAINER GRID */
-
-.container{
-    display: grid;
-
-    grid-template-areas:
-        "header"
-        "home"
-        "sobre"
-        "servicos"
-        "depoimentos"
-        "contato";
-
-    grid-template-rows: auto auto auto auto auto auto;
-
-    min-height: 100vh;
-
-    max-width: 1200px;
-    margin: auto;
+.container {
+    animation: aparecer 1s ease;
 }
 
-/* AREAS DO GRID */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-header{
-    grid-area: header;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-#home{
-    grid-area: home;
-}
-
-#sobre{
-    grid-area: sobre;
-}
-
-#servicos{
-    grid-area: servicos;
-}
-
-#depoimentos{
-    grid-area: depoimentos;
-}
-
-#contato{
-    grid-area: contato;
-}
 
 /* ESPAÇAMENTO */
 
@@ -71,53 +39,91 @@ img{
 
 /* MENU */
 
-nav ul{
+.cabecalho__nav__ul{
     display: flex;
     list-style: none;
     justify-content: center;
 }
 
-li{
+.cabecalho__nav__ul__link{
     padding: 1rem;
 }
 
-a{
+.cabecalho__nav__ul__link--ancora{
     color: #c1c0ae;
     text-decoration: none;
 }
 
-a:hover{
+.cabecalho__nav__ul__link--ancora:hover{
     color: #070705;
 }
 
 /* TITULOS */
 
 h2, h3{
-    color: #89a09a;
     padding: 1%;
 }
 
 p{
-    margin: 1.1rem;
+    margin: 1.5rem 1rem;
 }
 
-/* BOTAO */
-
-.botao{
+/* HOME */
+.home{
+    text-align: center;
+    color: #60a5fa;
+}
+.home--titulo, .home--paragrafo{
+    text-align: start;
+    color: #60a5fa;
+}
+.home--botao{
     background: #6366f1;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
 }
+/* SOBRE  Nós*/
 
-/* SERVIÇOS */
-
-#servicos{
+.sobre{
+    color: #34d399;
     text-align: center;
 }
+.sobre--titulo{
+    font-size: xx-large;
+}
+.sobre--paragafo{
+    text-decoration: underline;
+}
+.sobre--paragafo:hover{
+    font-size: 1.2em;
+    transition: 0.5s;
+}
 
-.cards-servicos{
+.sobre--valores{
+    font-size: xx-large;
+}
+.sobre__lista{
+    padding: 1em 0em;
+}
+.sobre__lista--valores{
+    padding: 1em;
+    text-decoration: none;
+}
+.sobre__lista--valores:hover{
+    color: #be4122;
+    transition: 1s;
+    transform: translateY(-5px);
+}
+/* SERVIÇOS */
+
+.servicos{
+    text-align: center;
+    color: #fbbf24;
+}
+
+.servicos--card{
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -125,11 +131,11 @@ p{
 }
 
 .card{
-    background: #070705;
+    background: #3e6970;
     height: 200px;
     width: 200px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.534);
     transition: 0.3s;
 }
 
@@ -137,10 +143,36 @@ p{
     transform: translateY(-5px);
 }
 
+.servicos--card--titulo{
+    color: #fff;
+    padding: 10px 0px ;
+}
+.servicos--card--paragrafo{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6bce44;
+}
+
 /* DEPOIMENTOS */
 
-blockquote{
-    padding: 20px 0px;
+.depoimentos{
+    color: #f87171;
+}
+.depoimentos--titulo{
+    transform: translateX(10%);
+}
+.depoimentos--paragrafo{
+    text-decoration: underline;
+    padding-top: 7px;
+    transform: translateX(5%);
+}
+
+
+
+
+
+.contato--titulo, .contato--paragrafo{
+    color: #c084fc;
 }
 
 @media (max-width: 768px){
