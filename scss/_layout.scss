@@ -1,0 +1,143 @@
+@use "variaveis" as *;
+.cabecalho__nav__ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.cabecalho__nav__ul__link{
+    padding: 1rem;
+}
+
+.cabecalho__nav__ul__link--ancora{
+    color: #c1c0ae;
+    text-decoration: none;
+}
+
+.cabecalho__nav__ul__link--ancora:hover{
+    color: #070705;
+}
+
+/* TITULOS */
+
+h2, h3{
+    padding: 1%;
+}
+
+p{
+    margin: 1.5rem 1rem;
+}
+
+/* HOME */
+.home{
+    text-align: center;
+    color: #60a5fa;
+}
+
+.home--titulo,
+.home--paragrafo{
+    text-align: start;
+    color: $home-color;
+}
+
+
+/* SOBRE */
+
+.sobre{
+    color: $sobre-color;
+    text-align: center;
+}
+
+
+.sobre--titulo{
+    font-size: xx-large;
+}
+
+.sobre--paragafo{
+    text-decoration: underline;
+}
+
+.sobre--paragafo:hover{
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.sobre--valores{
+    font-size: xx-large;
+}
+
+.sobre__lista{
+    padding: 1em 0em;
+}
+
+.sobre__lista--valores{
+    padding: 1em;
+    text-decoration: none;
+}
+
+.sobre__lista--valores:hover{
+    color: #be4122;
+    transition: 1s;
+    transform: translateY(-5px);
+}
+
+/* SERVIÇOS */
+
+.servicos{
+    text-align: center;
+    color: $services-color;
+}
+
+
+.servicos--card{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+    color: $depoimentos-color;
+}
+
+.depoimentos--titulo{
+    transform: translateX(10%);
+}
+
+.depoimentos--paragrafo{
+    text-decoration: underline;
+    padding-top: 7px;
+    transform: translateX(5%);
+}
+
+.contato--titulo,
+.contato--paragrafo{
+    color: $contato-color;
+}
+
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-servicos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        margin: 0;
+        max-width: 100vh;
+    }
+
+    img{
+        display: none;
+    }
+
+    .card{
+        max-width: 100%;
+    }
+}
